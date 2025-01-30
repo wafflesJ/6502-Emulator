@@ -128,12 +128,17 @@ function Label(value) {
   } else 
   return convert(value).value-1;
 }
-
+function LabelConvert(value) {
+  if(labels.has(value)) {
+    return (labels.get(value) - 1);
+  } else 
+  return value;
+}
 const actions = new Map([
   ['nop', () => Instuctions.push({op: 0})], // no op: Does nothing (NOP)
-  ['lda', (value,valueB) => Instuctions.push({op: 1, ...convert(value,valueB)})], // lda: Load a value into the accumulator (LDA)
-  ['ldx', (value,valueB) => Instuctions.push({op: 2, ...convert(value,valueB)})], // ldx: Load a value into the X register (LDX)
-  ['ldy', (value,valueB) => Instuctions.push({op: 3, ...convert(value,valueB)})], // ldy: Load a value into the Y register (LDY)
+  ['lda', (value,valueB) => Instuctions.push({op: 1, ...convert(LabelConvert(value),valueB)})], // lda: Load a value into the accumulator (LDA)
+  ['ldx', (value,valueB) => Instuctions.push({op: 2, ...convert(LabelConvert(value),valueB)})], // ldx: Load a value into the X register (LDX)
+  ['ldy', (value,valueB) => Instuctions.push({op: 3, ...convert(LabelConvert(value),valueB)})], // ldy: Load a value into the Y register (LDY)
   ['sta', (value,valueB) => Instuctions.push({op: 4, ...convert(value,valueB)})], // sta: Store the accumulator value in memory (STA)
   ['stx', (value,valueB) => Instuctions.push({op: 5, ...convert(value,valueB)})], // stx: Store the X register value in memory (STX)
   ['sty', (value,valueB) => Instuctions.push({op: 6, ...convert(value,valueB)})], // sty: Store the Y register value in memory (STY)
