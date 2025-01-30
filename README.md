@@ -4,7 +4,8 @@ An emulator for a modified 6502 assembly with a build in compiler and editor
 - A, X and Y Registers
 - 52 OpCodes
 - Text Output
-
+  
+**NOTE: All codes are saved to a universal database, please do not delete or ruin others code**  
 # Instructions and Syntax:
 All instructions begin with an mnemonic, a 3-letter code such as - `lda`  
 After each mnemonic, depending on the type will be followed by a value, either an immediate, repsented by the `$` prefix or a memory address, represented by the `#$` prefix. Values can be is decimal, hex `0x` or binary `0b`.  
