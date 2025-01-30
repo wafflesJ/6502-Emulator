@@ -31,6 +31,9 @@ inx      ;Increment X register
 cmx $12  ;Compare X register to 12
 bne loop ;Continue to loop until X equals 12
 ```
+**Constant Memory Addresses:**   
+- 0x100 though 0x1FF are the stack, they may be used but it isn't recomened
+- 0xFC though 0xFF store current key inputs in ASCII
 # Full Instruction Set:
 | Instruction | Takes Value | Description |
 |------------|-------|-------------|
@@ -87,4 +90,8 @@ bne loop ;Continue to loop until X equals 12
 | clb        | No    | Clear screen buffer |
 | cls        | No    | Clear screen |
 | ssb        | No    | Set screen to buffer |
-
+# Notes:
+- Some instructions may be broken or not function the same as the 6502
+- Some instructions are missing I have removed some instructions like `rti` (Return Interupt) becuase they no longer have purpose in the emulator, others just havn't been implemented yet
+- Registers and memory can hold values far greater than 256(Max byte size) but byte based instructions treat the values like a byte rotates are mostly effected
+- The clock speed may be set to any value but values over 10 Million may cause your browser to severly lag or crash, becuase of this a warning is givin every time a value beyond this is set
