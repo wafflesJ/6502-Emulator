@@ -32,59 +32,59 @@ cmx $12  ;Compare X register to 12
 bne loop ;Continue to loop until X equals 12
 ```
 # Full Instruction Set:
-| Instruction | Value | Description |
+| Instruction | Takes Value | Description |
 |------------|-------|-------------|
-| nop        | No    | Does nothing (NOP) |
-| lda        | Yes   | Load a value into the accumulator (LDA) |
-| ldx        | Yes   | Load a value into the X register (LDX) |
-| ldy        | Yes   | Load a value into the Y register (LDY) |
-| sta        | Yes   | Store the accumulator value in memory (STA) |
-| stx        | Yes   | Store the X register value in memory (STX) |
-| sty        | Yes   | Store the Y register value in memory (STY) |
-| adc        | Yes   | Add a value to the accumulator with the carry (ADC) |
-| sbc        | Yes   | Subtract a value from the accumulator with the carry (SBC) |
-| and        | Yes   | Perform a bitwise AND on the accumulator (AND) |
-| ora        | Yes   | Perform a bitwise OR on the accumulator (ORA) |
-| eor        | Yes   | Perform a bitwise XOR on the accumulator (EOR) |
-| cmp        | Yes   | Compare accumulator with value (CMP) |
-| cpx        | Yes   | Compare X register with value (CPX) |
-| cpy        | Yes   | Compare Y register with value (CPY) |
-| bit        | Yes   | Test bits in a memory location against the accumulator (BIT) |
-| inc        | Yes   | Increment the value at the memory location by 1 (INC) |
-| inx        | No    | Increment the X register by 1 (INX) |
-| iny        | No    | Increment the Y register by 1 (INY) |
-| dec        | Yes   | Decrement the value at the memory location by 1 (DEC) |
-| dex        | No    | Decrement the X register by 1 (DEX) |
-| dey        | No    | Decrement the Y register by 1 (DEY) |
-| bcc        | Yes   | Branch if carry is clear (BCC) |
-| bcs        | Yes   | Branch if carry is set (BCS) |
-| beq        | Yes   | Branch if zero flag is set (BEQ) |
-| bmi        | Yes   | Branch if negative flag is set (BMI) |
-| bne        | Yes   | Branch if zero flag is clear (BNE) |
-| bpl        | Yes   | Branch if negative flag is clear (BPL) |
-| bvc        | Yes   | Branch if overflow flag is clear (BVC) |
-| bvs        | Yes   | Branch if overflow flag is set (BVS) |
-| jmp        | Yes   | Jump to a specified address (JMP) |
-| jsr        | Yes   | Jump to a subroutine (JSR) |
-| rts        | No    | Return from subroutine (RTS) |
-| pha        | No    | Push accumulator onto the stack (PHA) |
-| php        | No    | Push processor status onto the stack (PHP) |
-| pla        | No    | Pull accumulator from the stack (PLA) |
-| plp        | No    | Pull processor status from the stack (PLP) |
-| tax        | No    | Transfer accumulator to X register (TAX) |
-| tay        | No    | Transfer accumulator to Y register (TAY) |
-| txa        | No    | Transfer X register to accumulator (TXA) |
-| tya        | No    | Transfer Y register to accumulator (TYA) |
-| tsx        | No    | Transfer stack pointer to X register (TSX) |
-| txs        | No    | Transfer X register to stack pointer (TXS) |
-| rol        | No    | Rotate left (ROL) |
-| ror        | No    | Rotate right (ROR) |
-| lsr        | No    | Logical shift right (LSR) |
-| lsl        | No    | Logical shift left (LSL) |
-| wrt        | Yes   | Output direct |
-| wrb        | Yes   | Output buffer |
+| nop        | No    | Does nothing |
+| lda        | Yes   | Load a value into the accumulator  |
+| ldx        | Yes   | Load a value into the X register  |
+| ldy        | Yes   | Load a value into the Y register  |
+| sta        | Yes   | Store the accumulator value in memory ( |
+| stx        | Yes   | Store the X register value in memory  |
+| sty        | Yes   | Store the Y register value in memory  |
+| adc        | Yes   | Add a value to the accumulator with the carry  |
+| sbc        | Yes   | Subtract a value from the accumulator with the carry|
+| and        | Yes   | Perform a bitwise AND on the accumulator  |
+| ora        | Yes   | Perform a bitwise OR on the accumulator  |
+| eor        | Yes   | Perform a bitwise XOR on the accumulator  |
+| cmp        | Yes   | Compare accumulator with value  |
+| cpx        | Yes   | Compare X register with value  |
+| cpy        | Yes   | Compare Y register with value  |
+| bit        | Yes   | Test bits in a memory location against the accumulator  |
+| inc        | Yes   | Increment the value at the memory location by 1  |
+| inx        | No    | Increment the X register by 1  |
+| iny        | No    | Increment the Y register by 1  |
+| dec        | Yes   | Decrement the value at the memory location by 1  |
+| dex        | No    | Decrement the X register by 1  |
+| dey        | No    | Decrement the Y register by 1  |
+| bcc        | Yes   | Branch if carry is clear  |
+| bcs        | Yes   | Branch if carry is set  |
+| beq        | Yes   | Branch if zero flag is set  |
+| bmi        | Yes   | Branch if negative flag is set  |
+| bne        | Yes   | Branch if zero flag is clear  |
+| bpl        | Yes   | Branch if negative flag is clear  |
+| bvc        | Yes   | Branch if overflow flag is clear  |
+| bvs        | Yes   | Branch if overflow flag is set  |
+| jmp        | Yes   | Jump to a specified address  |
+| jsr        | Yes   | Jump to a subroutine  |
+| rts        | No    | Return from subroutine  |
+| pha        | No    | Push accumulator onto the stack  |
+| php        | No    | Push processor status onto the stack  |
+| pla        | No    | Pull accumulator from the stack  |
+| plp        | No    | Pull processor status from the stack  |
+| tax        | No    | Transfer accumulator to X register  |
+| tay        | No    | Transfer accumulator to Y register  |
+| txa        | No    | Transfer X register to accumulator  |
+| tya        | No    | Transfer Y register to accumulator  |
+| tsx        | No    | Transfer stack pointer to X register  |
+| txs        | No    | Transfer X register to stack pointer  |
+| rol        | No    | Rotate bits left   |
+| ror        | No    | Rotate bits right |
+| lsr        | No    | Logical shift right  |
+| lsl        | No    | Logical shift left  |
+| wrt        | Yes   | Output directly |
+| wrb        | Yes   | Output to the screen buffer |
 | dsb        | No    | Display buffer |
 | clb        | No    | Clear screen buffer |
 | cls        | No    | Clear screen |
-| ssb        | No    | Set screen buffer |
+| ssb        | No    | Set screen to buffer |
 
