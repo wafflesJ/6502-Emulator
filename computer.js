@@ -272,10 +272,6 @@ const actions = {
     14: (value,memory,ofset) => {
       if(ofset==="X") value+=X;
       const val = memory ? MEMORY[value] :value;
-      console.log(memory);
-      console.log(ofset);
-      console.log(value);
-      console.log(val);
       if(val<Y) {
         PS = 0b1000;
       } else if(val==Y) {
