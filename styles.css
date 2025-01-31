@@ -178,6 +178,7 @@
 .output-text {
   overflow-y: auto; 
   height: 100%;
+  line-height: 1;
 }
 .output-text::-webkit-scrollbar {
             display: none;
