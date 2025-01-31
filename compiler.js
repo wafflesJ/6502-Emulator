@@ -180,8 +180,8 @@ const actions = new Map([
   ['txs', () => Instuctions.push({op: 42})], // txs: Transfer X register to stack pointer (TXS)
   ['rol', () => Instuctions.push({op: 49})], // rol: rotate left
   ['ror', () => Instuctions.push({op: 50})], // rol: rotate right
-  ['lsr', () => Instuctions.push({op: 51})], // rol: logic shift right
-  ['lsl', () => Instuctions.push({op: 52})], // rol: logic shift left
+  ['lsl', () => Instuctions.push({op: 51})], // rol: logic shift right
+  ['lsr', () => Instuctions.push({op: 52})], // rol: logic shift left
   //end of 6502, new
   ['wrt', (value,valueB) => Instuctions.push({op: 43, ...convert(value,valueB)})], //output direct
   ['wrb', (value,valueB) => Instuctions.push({op: 44, ...convert(value,valueB)})], //output buffer
