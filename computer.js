@@ -272,6 +272,8 @@ const actions = {
     14: (value,memory,ofset) => {
       if(ofset==="X") value+=X;
       const val = memory ? MEMORY[value] :value;
+      console.log(memory);
+      console.log(ofset);
       console.log(value);
       console.log(val);
       if(val<Y) {
@@ -281,6 +283,7 @@ const actions = {
       } else { // (val>Y)
         PS = 0b0010;
       } 
+      console.log(PS.toString(2));
       // cpy: Compare Y register with value (CPY)
     },
     15: (value,memory,ofset) => {
