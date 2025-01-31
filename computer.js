@@ -111,7 +111,7 @@ function Run (reset) {
        Y=0;
        buffer="";
        MEMORY.fill(0);
-       let Keys = [{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null}];
+       Keys = [{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null}];
        MEMORY[0xFC] ="";
        MEMORY[0xFD] ="";
        MEMORY[0xFE] ="";
