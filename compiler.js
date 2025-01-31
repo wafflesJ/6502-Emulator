@@ -124,7 +124,7 @@ function convert(value,valueB) {
 
 function Label(value) {
   if(labels.has(value)) {
-    return (labels.get(value) - 1);
+    return (labels.get(value) - 1).toString();
   } else 
   return convert(value).value-1;
 }
