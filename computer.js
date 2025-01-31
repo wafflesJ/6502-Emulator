@@ -187,19 +187,19 @@ const actions = {
       } else Y=value;
       // ldy: Load a value into the Y register (LDY)
     },
-    4: (value,ofset) => {
+    4: (value,memory,ofset) => {
       if(ofset==="X") value+=X;
       if(ofset==="Y") value+=Y;
       MEMORY[value]=A;
       // sta: Store the accumulator value in memory (STA)
     },
-    5: (value,ofset) => {
+    5: (value,memory,ofset) => {
       if(ofset==="X") value+=X;
       if(ofset==="Y") value+=Y;
       MEMORY[value]=X;
       // stx: Store the X register value in memory (STX)
     },
-    6: (value,ofset) => {
+    6: (value,memory,ofset) => {
       if(ofset==="X") value+=X;
       if(ofset==="Y") value+=Y;
       MEMORY[value]=Y;
@@ -290,7 +290,7 @@ const actions = {
       if((A&val)==0) PS = 0b0100;
       // bit: Test bits in a memory location against the accumulator (BIT)
     },
-    16: (value,ofset) => {
+    16: (value,memory,ofset) => {
       if(ofset==="X") value+=X;
       if(ofset==="Y") value+=Y;
       MEMORY[value]++;
@@ -304,7 +304,7 @@ const actions = {
       Y++;
       // iny: Increment the Y register by 1 (INY)
     },
-    19: (value,ofset) => {
+    19: (value,memory,ofset) => {
       if(ofset==="X") value+=X;
       if(ofset==="Y") value+=Y;
       MEMORY[value]--;
