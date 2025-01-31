@@ -220,7 +220,7 @@ const actions = {
       } else A-=value;
       // sbc: Subtract a value from the accumulator with the carry (SBC)
     },
-    9: (value,MEMORY,ofset) => {
+    9: (value,memory,ofset) => {
       if(ofset==="X") value+=X;
       if(ofset==="Y") value+=Y;
       if(memory) {
