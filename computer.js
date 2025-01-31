@@ -25,7 +25,7 @@ function setRun(reset) {
 }
 
 
-const Keys = [{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null}];
+let Keys = [{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null}];
 document.addEventListener("keydown", (event) => {
   const key= event.key;
   for(let i=0;i<12;i++) if(Keys[i].alt==event.code||event.key=="Shift") return; 
@@ -111,6 +111,7 @@ function Run (reset) {
        Y=0;
        buffer="";
        MEMORY.fill(0);
+       let Keys = [{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null},{val:0,alt:null}];
        MEMORY[0xFC] ="";
        MEMORY[0xFD] ="";
        MEMORY[0xFE] ="";
