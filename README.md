@@ -1,6 +1,7 @@
 # 6502-Emulator
 An emulator for a modified 6502 assembly with a build in compiler and editor.
 Despite having to compile code before running this 6502 Emulator in still interpreted, the compiler takes the raw text input and converts it into data for the interpreter.  
+The link to the emulator is [here](https://wafflesj.github.io/6502-Emulator/)
 
 - 64K Memory Addresses
 - A, X and Y Registers
